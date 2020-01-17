@@ -14,7 +14,17 @@ $(document).ready(
         clickPrev();
       }
     );
-
+    
+//-------- Utilizzo Tastiera
+    $(document).keydown(
+      function() {
+        if (event.keyCode == 39) {
+          clickNext();
+        } else if (event.keyCode == 37) {
+          clickPrev();
+        }
+      }
+    )
 });
 
 
@@ -29,7 +39,7 @@ function clickNext() {
 
 // ------Variabili circle
 
-var circleActive = $('.active');
+var circleActive = $('i.active');
 var nextCircle = circleActive.next()
 
   if (imageActive.hasClass('last') == true) {
