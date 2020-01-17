@@ -29,7 +29,14 @@ $(document).ready(
 function clickNext() {
   var imageActive = $('img.active');
   var nextImage = imageActive.next();
-  imageActive.removeClass('active');
-  nextImage.addClass('active');
+  if (imageActive.hasClass('last') == true) {
+    imageActive.removeClass('active');
+    $('img.first').addClass('active');
+  } else {
+    imageActive.removeClass('active');
+    nextImage.addClass('active');
+  }
+
+
 
 }
