@@ -14,8 +14,8 @@ $(document).ready(
         clickPrev();
       }
     );
-    
-//-------- Utilizzo Tastiera
+
+//-------- Utilizzo Tastiera -------
     $(document).keydown(
       function() {
         if (event.keyCode == 39) {
@@ -73,7 +73,7 @@ function clickPrev() {
 
 // ------Variabili circle
 
-var circleActive = $('.active');
+var circleActive = $('i.active');
 var nextCircle = circleActive.prev()
 
   if (imageActive.hasClass('first') == true) {
